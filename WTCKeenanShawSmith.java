@@ -12,13 +12,14 @@ public class WTCKeenanShawSmith {
         //Scanner object
         Scanner input = new Scanner(System.in);
 
-        //Prompt the user for a means of transportation
-        System.out.print("Choose a means of transportation (air/land/water)");
-        String means = input.next();
-
-        //Multiple selection statement for selected means
+        //Prompt user for a mode of transportation until they enter a valid input
         boolean validInput = false;
         while (!validInput) {
+            //User prompt
+            System.out.print("Choose a means of transportation (air/land/water) ");
+            String means = input.next();
+
+            //Multiple selection statement based on user input
             switch (means) {
                 case "land":
                     /*
