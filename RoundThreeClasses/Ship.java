@@ -23,7 +23,7 @@ public class Ship extends WaterTransportation{
         return String.format(
             "%sShip Name: %s%nCargo Type: %s%n",
             name,
-            cargoType;
-        )
+            cargoType
+        );
     }
 }
