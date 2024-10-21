@@ -17,6 +17,9 @@ public class Submarine extends WaterTransportation{
 
     @Override
     public String toString(){
-        return ".";
+        return String.format(
+            "%sDepth: %f%n",
+            depth
+        )
     }
 }
