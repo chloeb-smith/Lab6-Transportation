@@ -16,8 +16,19 @@ public class LandTransportation extends Transportation{
     public void setTerrainType(String terrainType){this.terrainType = terrainType;}
 
     @Override
-    public String toString(){return "Name: " + this.getName() + "\nSpeed: " +
-            this.getAverageSpeed() + "\nCost: " + this.getCost() + "Purchase Type: " +
-            this.getPurchaseType() + "\nMaximum Passengers: " + this.getMaxPassengers() + "\nTerrain: " +
-            this.terrainType + "\nWheels: " + this.numWheels;}
+    public String toString(){
+        return String.format(
+            "%sNumber of Wheels: %s%n",
+            super.toString,
+            numWheels
+        )
+    }
+    @Override
+    public String toString(){
+        return String.format(
+            "%sTerrain Type: %s%n",
+            super.toString,
+            terrainType
+        )
+    }
 }
