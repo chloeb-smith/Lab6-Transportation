@@ -45,13 +45,9 @@ public class Transportation {
 
     public double computeCost(){return cost * numPurchased;}
 
-    public String toString(){return "Name: " + this.name + "\nSpeed: " +
-            this.averageSpeed + "\nCost: " + this.cost + "Purchase Type: " +
-            this.purchaseType + "\nMaximum Passengers: " + this.maxPassengers;}
-
     public String toString(){
         return String.format(
-            "Name: %s%nSpeed: %f%nCost %f%nPurchase Type: s%nMaximum Passengers: %s%n",
+            "Name: %s%nSpeed: %f%nCost: %f%nPurchase Type: s%nMaximum Passengers: %s%n",
             name,
             averageSpeed,
             cost,

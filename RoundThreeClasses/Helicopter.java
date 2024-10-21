@@ -17,5 +17,11 @@ public class Helicopter extends AirTransportation{
 
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return String.format(
+            "%sBlades: %s%n",
+            super.toString,
+            numBlades
+        )
+    }
 }

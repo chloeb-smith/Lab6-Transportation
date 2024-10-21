@@ -16,5 +16,11 @@ public class Plane extends AirTransportation{
     public void setAirline(String airline) {this.airline = airline;}
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return String.format(
+            "%sAirline: %s%n",
+            super.toString,
+            airline
+        )
+    }
 }

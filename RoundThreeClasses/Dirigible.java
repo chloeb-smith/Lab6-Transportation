@@ -17,5 +17,11 @@ public class Dirigible extends AirTransportation{
 
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return String.format(
+            "%sColor: %s%n",
+            super.toString,
+            color
+        )
+    }
 }

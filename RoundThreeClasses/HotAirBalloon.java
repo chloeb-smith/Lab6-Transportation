@@ -17,5 +17,11 @@ public class HotAirBalloon extends AirTransportation{
     public void setBasketMaterial(String basketMaterial) {this.basketMaterial = basketMaterial;}
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return String.format(
+            "%sBasket Material: %s%n",
+            super.toString,
+            basketMaterial
+        )
+    }
 }
