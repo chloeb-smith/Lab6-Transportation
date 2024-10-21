@@ -22,5 +22,11 @@ public class Automobile extends LandTransportation {
     public void setYear(int year){this.year = year;}
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return String.format(
+            "%sMake: %s%nModel: %s%nYear: %s%n",
+            super.toString,
+            make, model, year
+        )
+    }
 }
