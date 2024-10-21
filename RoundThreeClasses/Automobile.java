@@ -27,6 +27,6 @@ public class Automobile extends LandTransportation {
             "%sMake: %s%nModel: %s%nYear: %s%n",
             super.toString,
             make, model, year
-        )
+        );
     }
 }
