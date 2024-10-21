@@ -17,7 +17,7 @@ public class Bus extends LandTransportation {
             "%sRoute Number: %d%n",
             super.toString,
             routeNum,
-        )
+        );
     }
 
 }
