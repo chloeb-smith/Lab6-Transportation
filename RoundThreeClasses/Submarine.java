@@ -16,5 +16,7 @@ public class Submarine extends WaterTransportation{
     public void setDepth(double depth) {this.depth = depth;}
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return ".";
+    }
 }
