@@ -20,5 +20,11 @@ public class Boat extends WaterTransportation {
     public void setNumEngines(int numEngines) {this.numEngines = numEngines;}
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return String.format(
+            "%sName: %s%nNumber of Engines: %s%n",
+            name,
+            numEngines,
+        );
+    }
 }
