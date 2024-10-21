@@ -48,4 +48,14 @@ public class Transportation {
     public String toString(){return "Name: " + this.name + "\nSpeed: " +
             this.averageSpeed + "\nCost: " + this.cost + "Purchase Type: " +
             this.purchaseType + "\nMaximum Passengers: " + this.maxPassengers;}
+
+    public String toString(){
+        return String.format(
+            "Name: %s%nSpeed: %f%nCost %f%nPurchase Type: s%nMaximum Passengers: %s%n",
+            name,
+            averageSpeed,
+            cost,
+            purchaseType,
+            maxPassengers
+        )
 }
