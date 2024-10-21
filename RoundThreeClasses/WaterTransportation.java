@@ -11,5 +11,10 @@ public class WaterTransportation extends Transportation {
     public void setWaterType(String waterType){this.waterType = waterType;}
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return String.format(
+            "%sWater Type: %s%n",
+            waterType
+        )
+    }
 }
