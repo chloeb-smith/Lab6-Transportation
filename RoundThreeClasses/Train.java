@@ -17,7 +17,7 @@ public class Train extends LandTransportation {
             "%sFuel Type: %s%n",
             super.toString,
             fuelType,
-        )
+        );
     }
 
 }
