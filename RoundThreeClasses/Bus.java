@@ -14,7 +14,7 @@ public class Bus extends LandTransportation {
     @Override
     public String toString(){
         return String.format(
-            "%sRoute Number: %s%n",
+            "%sRoute Number: %d%n",
             super.toString,
             routeNum,
         )
