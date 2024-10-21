@@ -12,6 +12,12 @@ public class Train extends LandTransportation {
     public void setFuelType(String fuelType){this.fuelType = fuelType;}
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return String.format(
+            "%sFuel Type: %s%n",
+            super.toString,
+            fuelType,
+        )
+    }
 
 }
