@@ -12,6 +12,12 @@ public class Bus extends LandTransportation {
     public void setRouteNum(int routeNum){this.routeNum = routeNum;}
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return String.format(
+            "%sRoute Number: %s%n",
+            super.toString,
+            routeNum,
+        )
+    }
 
 }
