@@ -19,5 +19,11 @@ public class Ship extends WaterTransportation{
     public void setCargoType(String cargoType) {this.cargoType = cargoType;}
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return String.format(
+            "%sShip Name: %s%nCargo Type: %s%n",
+            name,
+            cargoType;
+        )
+    }
 }
