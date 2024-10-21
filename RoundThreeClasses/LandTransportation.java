@@ -18,17 +18,10 @@ public class LandTransportation extends Transportation{
     @Override
     public String toString(){
         return String.format(
-            "%sNumber of Wheels: %s%n",
+            "%sNumber of Wheels: %s%nTerrain Type: %s%n",
             super.toString,
-            numWheels
+            numWheels, terrainType
         )
     }
-    @Override
-    public String toString(){
-        return String.format(
-            "%sTerrain Type: %s%n",
-            super.toString,
-            terrainType
-        )
-    }
+    
 }
