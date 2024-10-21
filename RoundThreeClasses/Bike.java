@@ -16,5 +16,19 @@ public class Bike extends LandTransportation {
     public void setNumGears(int numGears){this.numGears = numGears;}
 
     @Override
-    public String toString(){return ".";}
+    public String toString(){
+        return String.format(
+            "%sBrand: %s%n",
+            super.toString,
+            brand
+        )
+    }
+    @Override
+    public String toString(){
+        return String.format(
+            "%sNumber of Gears: %s%n",
+            super.toString,
+            numGears
+        )
+    }
 }
