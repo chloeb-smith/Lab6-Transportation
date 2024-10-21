@@ -22,7 +22,7 @@ public class Boat extends WaterTransportation {
     @Override
     public String toString(){
         return String.format(
-            "%sName: %s%nNumber of Engines: %s%n",
+            "%sName: %s%nNumber of Engines: %d%n",
             name,
             numEngines,
         );
