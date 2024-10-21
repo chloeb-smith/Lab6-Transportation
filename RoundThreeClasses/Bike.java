@@ -18,17 +18,9 @@ public class Bike extends LandTransportation {
     @Override
     public String toString(){
         return String.format(
-            "%sBrand: %s%n",
+            "%sBrand: %s%nNumber of Gears: %s%n",
             super.toString,
-            brand
-        )
-    }
-    @Override
-    public String toString(){
-        return String.format(
-            "%sNumber of Gears: %s%n",
-            super.toString,
-            numGears
+            brand, numGears
         )
     }
 }
