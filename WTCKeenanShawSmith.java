@@ -8,6 +8,24 @@ import java.util.Scanner;
 
 public class WTCKeenanShawSmith {
     public static void main(String[] args) {
+        //Instances
+        // Land Transportation
+        Bus bus = new Bus("Bus", 45.0, 3.50, "Ticket", false, 0, 40,"Travel Instr.", "Terrain", 8, 101);
+        Automobile auto = new Automobile("Car", 60.0, 50.0,"Rental", false, 0, 4, "Travel Instr.", "Terrain", 4, "Toyota", "Camry", 2015);
+        Bike bike = new Bike("Bike", 30.0, 15.0,"Rental", false, 0, 1, "Travel Instr.", "Terrain", 2, "Schwinn", 2);
+        Train train = new Train("Train", 55.0, 20.0,"Ticket", false, 0, 25, "Travel Instr.", "Terrain",8 , "Coal");
+
+        //Water Transportation
+        Boat boat = new Boat("Boat", 60.0, 50.0,"Rental", false, 0, 8, "Travel Instr.", "Intracoastal Waterway");
+        Ship ship = new Ship("Ship", 45.0, 45.0,"Ticket", false, 0, 100, "Travel Instr.", "Sea");
+        Submarine sub = new Submarine("Sub", 25.0, 60.0,"Ticket", false, 0, 8, "Travel Instr.", "Underwater");
+
+        //Air Transportation
+        Plane plane = new Plane("Plane", 3000.0, 350.0,"Ticket", false, 0, 700, "Travel Instr.", 42000);
+        Helicopter heli = new Helicopter("Chopper", 250, 950.0,"Ticket", false, 0, 7, "Travel Instr.", 25000);
+        HotAirBalloon balloon = new HotAirBalloon("Hot Air Balloon", 200, 250.0,"Ticket", false, 0, 12, "Travel Instr.", 75000);
+        Dirigible dirigible = new Dirigible("Dirigible", 70, 2000000,"Ticket", false, 0, 15, "Travel Instr.", 10000);
+        
         //Scanner object
         Scanner input = new Scanner(System.in);
 
