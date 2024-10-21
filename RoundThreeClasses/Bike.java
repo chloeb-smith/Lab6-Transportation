@@ -21,6 +21,6 @@ public class Bike extends LandTransportation {
             "%sBrand: %s%nNumber of Gears: %s%n",
             super.toString,
             brand, numGears
-        )
+        );
     }
 }
