@@ -21,7 +21,7 @@ public class LandTransportation extends Transportation{
             "%sNumber of Wheels: %s%nTerrain Type: %s%n",
             super.toString,
             numWheels, terrainType
-        )
+        );
     }
     
 }
