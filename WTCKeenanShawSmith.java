@@ -10,21 +10,128 @@ public class WTCKeenanShawSmith {
     public static void main(String[] args) {
         //Instances
         // Land Transportation
-        Bus bus = new Bus("Bus", 45.0, 3.50, "Ticket", false, 0, 40,"Travel Instr.", "Terrain", 8, 101);
-        Automobile auto = new Automobile("Car", 60.0, 50.0,"Rental", false, 0, 4, "Travel Instr.", "Terrain", 4, "Toyota", "Camry", 2015);
-        Bike bike = new Bike("Bike", 30.0, 15.0,"Rental", false, 0, 1, "Travel Instr.", "Terrain", 2, "Schwinn", 2);
-        Train train = new Train("Train", 55.0, 20.0,"Ticket", false, 0, 25, "Travel Instr.", "Terrain",8 , "Coal");
+        Bus bus = new Bus(
+                "Bus",
+                45.0,
+                3.50,
+                "Ticket",
+                false,
+                0,
+                40,
+                "Bus travels from Smith Station down College Rd to Monkey Junction as the 107. It then" +
+                        "becomes the 210 and travels up Carolina Beach Rd to Shaw Station",
+                "Pavement",
+                8,
+                101);
+        Automobile auto = new Automobile(
+                "Car",
+                60.0,
+                50.0,
+                "Rental",
+                false,
+                0,
+                4,
+                "Go to Monkey Junction Car Rentals on Carolina Beach Rd near College Rd. Wear your" +
+                        "seatbelt and drive safely.",
+                "Terrain",
+                4,
+                "Toyota",
+                "Camry",
+                2015);
+        Bike bike = new Bike(
+                "Bike",
+                30.0,
+                15.0,
+                "Rental",
+                false,
+                0,
+                1,
+                "Travel Instr.",
+                "Terrain",
+                2,
+                "Schwinn",
+                2);
+        Train train = new Train(
+                "Train",
+                55.0,
+                20.0,
+                "Ticket",
+                false,
+                0,
+                25,
+                "Train leaves Keenan station at 8PM. Get off at Sisson Station.",
+                "Terrain",
+                8 ,
+                "Coal");
 
         //Water Transportation
-        Boat boat = new Boat("Boat", 60.0, 50.0,"Rental", false, 0, 8, "Travel Instr.", "Intracoastal Waterway");
-        Ship ship = new Ship("Ship", 45.0, 45.0,"Ticket", false, 0, 100, "Travel Instr.", "Sea");
-        Submarine sub = new Submarine("Sub", 25.0, 60.0,"Ticket", false, 0, 8, "Travel Instr.", "Underwater");
+        Boat boat = new Boat(
+                "Boat",
+                60.0,
+                50.0,
+                "Rental",
+                false,
+                0,
+                8,
+                "Your boat is docked at Cape Fear Boat Place. Go there to use.",
+                "Intracoastal Waterway",
+                "Boat",
+                6
+        );
+        Ship ship = new Ship(
+                "Ship",
+                45.0,
+                45.0,
+                "Ticket",
+                false,
+                0,
+                100,
+                "Ship leaves the port at 8AM. All sailors to their stations.",
+                "Sea",
+                "Food"
+        );
+        Submarine sub = new Submarine(
+                "Sub",
+                25.0,
+                60.0,
+                "Ticket",
+                false,
+                0,
+                8,
+                "DIVE! DIVE!",
+                "Underwater",
+                10000
+        );
 
         //Air Transportation
-        Plane plane = new Plane("Plane", 3000.0, 350.0,"Ticket", false, 0, 700, "Travel Instr.", 42000);
-        Helicopter heli = new Helicopter("Chopper", 250, 950.0,"Ticket", false, 0, 7, "Travel Instr.", 25000);
-        HotAirBalloon balloon = new HotAirBalloon("Hot Air Balloon", 200, 250.0,"Ticket", false, 0, 12, "Travel Instr.", 75000);
-        Dirigible dirigible = new Dirigible("Dirigible", 70, 2000000,"Ticket", false, 0, 15, "Travel Instr.", 10000);
+        Plane plane = new Plane(
+                "Plane",
+                3000.0,
+                350.0,
+                "Ticket",
+                false,
+                0,
+                700,
+                "Your flight has been delayed 6 hours. It will leave at terminal B at 2AM.",
+                42000,
+                "Delta"
+        );
+        Helicopter heli = new Helicopter(
+                "Chopper",
+                250,
+                950.0,
+                "Ticket",
+                false,
+                0,
+                7,
+                "Travel Instr.",
+                25000);
+        HotAirBalloon balloon = new HotAirBalloon("Hot Air Balloon", 200, 250.0,
+                "Ticket", false, 0, 12, "Travel Instr.",
+                75000, "Wicker");
+        Dirigible dirigible = new Dirigible("Dirigible", 70, 2000000,"Ticket",
+                false, 0, 15, "Travel Instr.", 10000,
+                "Yellow");
         
         //Scanner object
         Scanner input = new Scanner(System.in);
