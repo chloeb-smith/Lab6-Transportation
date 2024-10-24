@@ -20,8 +20,8 @@ public class Helicopter extends AirTransportation{
     public String toString(){
         return String.format(
             "%sBlades: %s%n",
-            super.toString,
+            super.toString(),
             numBlades
-        )
+        );
     }
 }

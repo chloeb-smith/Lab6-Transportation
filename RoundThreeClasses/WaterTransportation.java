@@ -14,8 +14,8 @@ public class WaterTransportation extends Transportation {
     public String toString(){
         return String.format(
             "%sWater Type: %s%n",
-            super.toString,
+            super.toString(),
             waterType
-        )
+        );
     }
 }

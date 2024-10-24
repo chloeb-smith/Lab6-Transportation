@@ -19,7 +19,7 @@ public class LandTransportation extends Transportation{
     public String toString(){
         return String.format(
             "%sNumber of Wheels: %s%nTerrain Type: %s%n",
-            super.toString,
+            super.toString(),
             numWheels, terrainType
         );
     }

@@ -4,7 +4,9 @@ public class HotAirBalloon extends AirTransportation{
     public String basketMaterial;
 
     //Constructor
-    public HotAirBalloon(String name, double averageSpeed, double cost, String purchaseType, boolean purchased, int numPurchased, int maxPassengers, String travelInstructions, int altitude) {
+    public HotAirBalloon(String name, double averageSpeed, double cost, String purchaseType, boolean purchased,
+                         int numPurchased, int maxPassengers, String travelInstructions, int altitude,
+                         String basketMaterial) {
         super(name, averageSpeed, cost, purchaseType, purchased, numPurchased, maxPassengers, travelInstructions, altitude);
 
         this.basketMaterial = basketMaterial;
@@ -20,8 +22,8 @@ public class HotAirBalloon extends AirTransportation{
     public String toString(){
         return String.format(
             "%sBasket Material: %s%n",
-            super.toString,
+            super.toString(),
             basketMaterial
-        )
+        );
     }
 }

@@ -3,7 +3,8 @@ public class Submarine extends WaterTransportation{
      public double depth;
 
     //Constructor
-    public Submarine(String name, double averageSpeed, double cost, String purchaseType, boolean purchased, int numPurchased, int maxPassengers, String travelInstructions, String waterType) {
+    public Submarine(String name, double averageSpeed, double cost, String purchaseType, boolean purchased,
+                     int numPurchased, int maxPassengers, String travelInstructions, String waterType, double depth) {
         super(name, averageSpeed, cost, purchaseType, purchased, numPurchased, maxPassengers, travelInstructions, waterType);
 
         this.depth = depth;
@@ -19,7 +20,8 @@ public class Submarine extends WaterTransportation{
     public String toString(){
         return String.format(
             "%sDepth: %f%n",
+            super.toString(),
             depth
-        )
+        );
     }
 }

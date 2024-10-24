@@ -25,7 +25,7 @@ public class Automobile extends LandTransportation {
     public String toString(){
         return String.format(
             "%sMake: %s%nModel: %s%nYear: %s%n",
-            super.toString,
+            super.toString(),
             make, model, year
         );
     }

@@ -45,13 +45,14 @@ public class Transportation {
 
     public double computeCost(){return cost * numPurchased;}
 
-    public String toString(){
+    public String toString() {
         return String.format(
-            "Name: %s%nSpeed: %f%nCost: %f%nPurchase Type: s%nMaximum Passengers: %s%n",
-            name,
-            averageSpeed,
-            cost,
-            purchaseType,
-            maxPassengers
-        )
+                "Name: %s%nSpeed: %f%nCost: %f%nPurchase Type: %s%nMaximum Passengers: %s%n",
+                name,
+                averageSpeed,
+                cost,
+                purchaseType,
+                maxPassengers
+        );
+    }
 }

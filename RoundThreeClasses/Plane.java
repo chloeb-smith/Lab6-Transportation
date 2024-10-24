@@ -3,7 +3,8 @@ public class Plane extends AirTransportation{
     public String airline;
 
     //Constructor
-    public Plane(String name, double averageSpeed, double cost, String purchaseType, boolean purchased, int numPurchased, int maxPassengers, String travelInstructions, int altitude) {
+    public Plane(String name, double averageSpeed, double cost, String purchaseType, boolean purchased,
+                 int numPurchased, int maxPassengers, String travelInstructions, int altitude, String airline) {
         super(name, averageSpeed, cost, purchaseType, purchased, numPurchased, maxPassengers, travelInstructions, altitude);
 
         this.airline = airline;
@@ -19,8 +20,8 @@ public class Plane extends AirTransportation{
     public String toString(){
         return String.format(
             "%sAirline: %s%n",
-            super.toString,
+            super.toString(),
             airline
-        )
+        );
     }
 }

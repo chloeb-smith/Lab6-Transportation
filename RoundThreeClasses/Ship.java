@@ -4,7 +4,8 @@ public class Ship extends WaterTransportation{
     public String cargoType;
 
     //Constructor
-    public Ship(String name, double averageSpeed, double cost, String purchaseType, boolean purchased, int numPurchased, int maxPassengers, String travelInstructions, String waterType) {
+    public Ship(String name, double averageSpeed, double cost, String purchaseType, boolean purchased, int numPurchased,
+                int maxPassengers, String travelInstructions, String waterType, String cargoType) {
         super(name, averageSpeed, cost, purchaseType, purchased, numPurchased, maxPassengers, travelInstructions, waterType);
         this.shipName = name;
         this.cargoType = cargoType;
@@ -22,7 +23,8 @@ public class Ship extends WaterTransportation{
     public String toString(){
         return String.format(
             "%sShip Name: %s%nCargo Type: %s%n",
-            name,
+            super.toString(),
+            shipName,
             cargoType
         );
     }

@@ -15,8 +15,8 @@ public class Bus extends LandTransportation {
     public String toString(){
         return String.format(
             "%sRoute Number: %d%n",
-            super.toString,
-            routeNum,
+            super.toString(),
+            routeNum
         );
     }
 

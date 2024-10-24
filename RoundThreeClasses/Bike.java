@@ -19,7 +19,7 @@ public class Bike extends LandTransportation {
     public String toString(){
         return String.format(
             "%sBrand: %s%nNumber of Gears: %s%n",
-            super.toString,
+            super.toString(),
             brand, numGears
         );
     }

@@ -15,8 +15,8 @@ public class Train extends LandTransportation {
     public String toString(){
         return String.format(
             "%sFuel Type: %s%n",
-            super.toString,
-            fuelType,
+            super.toString(),
+            fuelType
         );
     }
 

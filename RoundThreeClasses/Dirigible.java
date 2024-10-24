@@ -3,7 +3,8 @@ public class Dirigible extends AirTransportation{
     public String color;
 
     //Constructor
-    public Dirigible(String name, double averageSpeed, double cost, String purchaseType, boolean purchased, int numPurchased, int maxPassengers, String travelInstructions, int altitude) {
+    public Dirigible(String name, double averageSpeed, double cost, String purchaseType, boolean purchased,
+                     int numPurchased, int maxPassengers, String travelInstructions, int altitude, String color) {
         super(name, averageSpeed, cost, purchaseType, purchased, numPurchased, maxPassengers, travelInstructions, altitude);
 
         this.color = color;
@@ -20,8 +21,8 @@ public class Dirigible extends AirTransportation{
     public String toString(){
         return String.format(
             "%sColor: %s%n",
-            super.toString,
+            super.toString(),
             color
-        )
+        );
     }
 }
