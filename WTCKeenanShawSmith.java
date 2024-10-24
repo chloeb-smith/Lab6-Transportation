@@ -9,7 +9,11 @@ import java.util.Scanner;
 public class WTCKeenanShawSmith {
     public static void main(String[] args) {
         //Instances
+        Transportation[] transportations = new Transportation[10];
+
         // Land Transportation
+        LandTransportation[] landTransportations = new LandTransportation[4];   // and here!
+
         Bus bus = new Bus(
                 "Bus",
                 45.0,
@@ -22,7 +26,11 @@ public class WTCKeenanShawSmith {
                         "becomes the 210 and travels up Carolina Beach Rd to Shaw Station",
                 "Pavement",
                 8,
-                101);
+                101
+        );
+        transportations[0] = bus;
+        landTransportations[0] = bus;
+
         Automobile auto = new Automobile(
                 "Car",
                 60.0,
@@ -37,7 +45,11 @@ public class WTCKeenanShawSmith {
                 4,
                 "Toyota",
                 "Camry",
-                2015);
+                2015
+        );
+        transportations[1] = auto;
+        landTransportations[1] = auto;
+
         Bike bike = new Bike(
                 "Bike",
                 30.0,
@@ -50,7 +62,11 @@ public class WTCKeenanShawSmith {
                 "Terrain",
                 2,
                 "Schwinn",
-                2);
+                2
+        );
+        transportations[2] = bike;
+        landTransportations[2] = bike;
+
         Train train = new Train(
                 "Train",
                 55.0,
@@ -62,9 +78,13 @@ public class WTCKeenanShawSmith {
                 "Train leaves Keenan station at 8PM. Get off at Sisson Station.",
                 "Terrain",
                 8 ,
-                "Coal");
+                "Coal"
+        );
+        transportations[3] = train;
+        landTransportations[3] = train;
 
         //Water Transportation
+        WaterTransportation[] waterTransportations = new WaterTransportation[3];    // and here!
         Boat boat = new Boat(
                 "Boat",
                 60.0,
@@ -78,6 +98,9 @@ public class WTCKeenanShawSmith {
                 "Boat",
                 6
         );
+        transportations[4] = boat;
+        waterTransportations[0] = boat;
+
         Ship ship = new Ship(
                 "Ship",
                 45.0,
@@ -90,6 +113,9 @@ public class WTCKeenanShawSmith {
                 "Sea",
                 "Food"
         );
+        transportations[5] = ship;
+        waterTransportations[1] = ship;
+
         Submarine sub = new Submarine(
                 "Sub",
                 25.0,
@@ -102,8 +128,12 @@ public class WTCKeenanShawSmith {
                 "Underwater",
                 10000
         );
+        transportations[6] = ship;
+        waterTransportations[2] = ship;
 
         //Air Transportation
+        AirTransportation[] airTransportations = new AirTransportation[4];
+
         Plane plane = new Plane(
                 "Plane",
                 3000.0,
@@ -116,6 +146,9 @@ public class WTCKeenanShawSmith {
                 42000,
                 "Delta"
         );
+        transportations[7] = plane;
+        airTransportations[0] = plane;
+
         Helicopter heli = new Helicopter(
                 "Chopper",
                 250,
@@ -125,17 +158,46 @@ public class WTCKeenanShawSmith {
                 0,
                 7,
                 "Travel Instr.",
-                25000);
-        HotAirBalloon balloon = new HotAirBalloon("Hot Air Balloon", 200, 250.0,
-                "Ticket", false, 0, 12, "Travel Instr.",
-                75000, "Wicker");
-        Dirigible dirigible = new Dirigible("Dirigible", 70, 2000000,"Ticket",
-                false, 0, 15, "Travel Instr.", 10000,
-                "Yellow");
+                25000
+        );
+        transportations[8] = heli;
+        airTransportations[1] = heli;
+
+        HotAirBalloon balloon = new HotAirBalloon(
+                "Hot Air Balloon",
+                200,
+                250.0,
+                "Ticket",
+                false,
+                0,
+                12,
+                "Travel Instr.",
+                75000,
+                "Wicker"
+        );
+        transportations[9] = balloon;
+        airTransportations[2] = balloon;
+
+        Dirigible dirigible = new Dirigible(
+                "Dirigible",
+                70,
+                2000000,
+                "Ticket",
+                false,
+                0,
+                15,
+                "Travel Instr.",
+                10000,
+                "Yellow"
+        );
+        transportations[10] = dirigible;
+        airTransportations[3] = dirigible;
         
         //Scanner object
         Scanner input = new Scanner(System.in);
 
+        //TODO: rework the code below, I think this could be a lot more efficient taking advantage of polymorphism
+        /*
         String[] land_modes = {"Option", "Train", "Bus", "Automobile", "Bike"};
         String[] water_modes = {"Option", "Boat", "Ship", "Submarine"};
         String[] air_modes = {"Plane", "Helicopter", "Dirigible", "Hot Air Balloon"};
@@ -187,6 +249,7 @@ public class WTCKeenanShawSmith {
      * User selects a specific transportation device and passenger count, prints information.
      * @param type String air/land/water. Only affects initial printed message.
      */
+        /*
     public static void vehicle(String type){
         //Scanner object
         Scanner input = new Scanner(System.in);
@@ -310,7 +373,7 @@ public class WTCKeenanShawSmith {
     /**
      * Prompts the user y for yes and n for no.
      * @return boolean true if y, false if n
-     */
+     *//*
     public static boolean confirm(){
         //Scanner object
         Scanner input = new Scanner(System.in);
@@ -332,3 +395,4 @@ public class WTCKeenanShawSmith {
         }
     }
 }
+*/}}
