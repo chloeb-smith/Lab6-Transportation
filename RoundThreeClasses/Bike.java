@@ -1,4 +1,5 @@
 public class Bike extends LandTransportation {
+    
     // Class Attributes
     private String brand;
     private int numGears;
