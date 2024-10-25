@@ -46,7 +46,10 @@ public class Transportation {
     public double getComputedTicketCost(){return cost * numPurchased;}
     public double getComputedRentalCost(){return (Math.ceil((double) numPurchased / maxPassengers)) * cost;}
 
-
+    /**
+    * Creates a string representation of the methods output
+    * @return a string
+    */
     public String toString() {
         return String.format(
                 "Name: %s%nSpeed: %.2f%s%nCost: $%.2f%nPurchase Type: %s%nMaximum Passengers: %s%n",
