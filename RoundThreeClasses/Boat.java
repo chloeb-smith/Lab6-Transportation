@@ -12,12 +12,32 @@ public class Boat extends WaterTransportation {
         this.numEngines = numEngines;
     }
 
-    //Accessor Methods (getters)
+    // Getters
+
+    /** 
+    * Gets the boat name
+    * @return boatName
+    */ 
     public String getBoatName() {return boatName;}
+
+    /** 
+    * Gets the number of engines
+    * @return numEngines
+    */ 
     public int getNumEngines() {return numEngines;}
 
-    //Mutator Methods (setters)
+    // Setters
+
+    /** 
+    * Sets the boat name
+    * @param boatName
+    */ 
     public void setBoatName(String boatName) {this.boatName = boatName;}
+
+    /** 
+    * Sets the number of engines
+    * @param numEngines
+    */ 
     public void setNumEngines(int numEngines) {this.numEngines = numEngines;}
 
     /**
