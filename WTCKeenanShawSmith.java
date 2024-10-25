@@ -54,7 +54,7 @@ public class WTCKeenanShawSmith {
                 false,
                 0,
                 1,
-                "Travel Instr.",
+                "Must ride within designated bike lanes if avaiable and/or ahere to Vulnerable Road User(VRU) laws.",
                 "Terrain",
                 2,
                 "Schwinn",
@@ -144,7 +144,8 @@ public class WTCKeenanShawSmith {
                 false,
                 0,
                 7,
-                "Travel Instr.",
+                "You will need to bring a valid ID and passport to the front desk of Smith Private Airways" + 
+                    " to sucessfully board.",
                 25000
         );
         transportations[8] = heli;
@@ -157,7 +158,7 @@ public class WTCKeenanShawSmith {
                 false,
                 0,
                 12,
-                "Travel Instr.",
+                "Please ensure that you are wearing closed toed shoes.",
                 75000,
                 "Wicker"
         );
@@ -171,7 +172,7 @@ public class WTCKeenanShawSmith {
                 false,
                 0,
                 15,
-                "Travel Instr.",
+                "Boarding begins at 6AM and takeoff will follow at 6:45AM.",
                 10000,
                 "Yellow"
         );
