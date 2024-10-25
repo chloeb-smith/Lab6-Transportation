@@ -1,4 +1,5 @@
 public class Dirigible extends AirTransportation{
+    
     // Class Attributes
     public String color;
 
