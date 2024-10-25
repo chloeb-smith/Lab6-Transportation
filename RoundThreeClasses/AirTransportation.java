@@ -7,9 +7,23 @@ public class AirTransportation extends Transportation {
 
         this.altitude = altitude;
     }
+    
+    /**
+    * Gets altitude
+    * @return altitude 
+    */
     public int getAltitude(){return altitude;}
+    
+    /**
+    * Sets the altitude
+    * @params altidude
+    */
     public void setAltitude(int altitude){this.altitude = altitude;}
 
+    /**
+    * Creates a string representation of the methods output
+    * @return a string
+    */
     @Override
     public String toString(){
         return String.format(
