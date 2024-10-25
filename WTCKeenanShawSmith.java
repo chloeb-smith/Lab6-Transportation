@@ -3,7 +3,6 @@
  * John Keenan, Tyana Shaw, Chloe Smith
  * 10/18/2024
  * CSC331-003
- * TODO: fill in travel instructions and delete this comment! :-)
  */
 import java.util.Scanner;
 
