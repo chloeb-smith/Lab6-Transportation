@@ -43,7 +43,9 @@ public class Transportation {
     public String getTravelInstructions(){return travelInstructions;}
     public void setTravelInstructions(String travelInstructions){this.travelInstructions = travelInstructions;}
 
-    public double computeCost(){return cost * numPurchased;}
+    public double getComputedTicketCost(){return cost * numPurchased;}
+    public double getComputedRentalCost(){return (Math.ceil((double) numPurchased / maxPassengers)) * cost;}
+
 
     public String toString() {
         return String.format(
