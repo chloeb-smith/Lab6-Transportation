@@ -12,10 +12,20 @@ public class HotAirBalloon extends AirTransportation{
         this.basketMaterial = basketMaterial;
     }
 
-    //Accessor Methods (getters)
+    // Getters
+
+    /** 
+    * Gets the basket material
+    * @return basetMaterial
+    */ 
     public String getBasketMaterial() {return basketMaterial;}
 
-    //Mutator Methods (setters)
+    // Setters
+
+    /** 
+    * Sets the basket material
+    * @param basetMaterial
+    */ 
     public void setBasketMaterial(String basketMaterial) {this.basketMaterial = basketMaterial;}
 
     /**
