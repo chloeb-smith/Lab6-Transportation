@@ -1,4 +1,5 @@
 public class AirTransportation extends Transportation {
+    
     // Class Variables
     private int altitude;
 
