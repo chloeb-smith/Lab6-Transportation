@@ -23,7 +23,7 @@ public class Plane extends AirTransportation{
 
     /** 
     * Sets the airline
-    * @params airline
+    * @param airline
     */ 
     public void setAirline(String airline) {this.airline = airline;}
 
