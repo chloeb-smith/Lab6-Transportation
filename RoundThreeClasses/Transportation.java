@@ -49,9 +49,9 @@ public class Transportation {
 
     public String toString() {
         return String.format(
-                "Name: %s%nSpeed: %f%nCost: %f%nPurchase Type: %s%nMaximum Passengers: %s%n",
+                "Name: %s%nSpeed: %.2f%s%nCost: $%.2f%nPurchase Type: %s%nMaximum Passengers: %s%n",
                 name,
-                averageSpeed,
+                averageSpeed, " mph",
                 cost,
                 purchaseType,
                 maxPassengers
