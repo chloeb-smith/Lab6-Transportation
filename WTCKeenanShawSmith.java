@@ -203,6 +203,7 @@ public class WTCKeenanShawSmith {
                 "Average Speed",
                 "Max Passengers"
         );
+        // Display the instance information
         for (Transportation transportation : transportations) {
             if (transportation instanceof AirTransportation && medium.equals("Air") ||
                     transportation instanceof LandTransportation && medium.equals("Land") ||
