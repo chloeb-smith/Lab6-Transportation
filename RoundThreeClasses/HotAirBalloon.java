@@ -18,6 +18,10 @@ public class HotAirBalloon extends AirTransportation{
     //Mutator Methods (setters)
     public void setBasketMaterial(String basketMaterial) {this.basketMaterial = basketMaterial;}
 
+    /**
+    * Creates a string representation of the methods output
+    * @return a string
+    */
     @Override
     public String toString(){
         return String.format(
