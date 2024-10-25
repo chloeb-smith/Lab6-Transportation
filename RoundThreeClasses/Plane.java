@@ -1,4 +1,5 @@
 public class Plane extends AirTransportation{
+    
     // Class Attributes
     public String airline;
 
@@ -10,10 +11,20 @@ public class Plane extends AirTransportation{
         this.airline = airline;
     }
 
-    //Accessor Methods (getters)
+    // Getters
+
+    /** 
+    * Gets the airline
+    * @return airline
+    */ 
     public String getAirline() {return airline;}
 
-    //Mutator Methods (setters)
+    // Setters
+
+    /** 
+    * Sets the airline
+    * @params airline
+    */ 
     public void setAirline(String airline) {this.airline = airline;}
 
     /**
