@@ -9,7 +9,7 @@ public class AirTransportation extends Transportation {
     }
     
     /**
-    * Gets altitude
+    * Gets the altitude
     * @return altitude 
     */
     public int getAltitude(){return altitude;}
