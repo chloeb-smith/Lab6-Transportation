@@ -78,6 +78,11 @@ public class Transportation {
     */
     public double getComputedTicketCost(){return cost * numPurchased;}
 
+    /**
+    * Gets the total cost
+    * @return cost
+    */
+    public double getComputedRentalCost(){return (Math.ceil((double) numPurchased / maxPassengers)) * cost;}
 
     // Setters
 
@@ -89,7 +94,7 @@ public class Transportation {
 
     /**
     * Sets the average speed
-    * @param average speed
+    * @param averageSpeed
     */
     public void setAverageSpeed(double averageSpeed){this.averageSpeed = averageSpeed;}
 
@@ -101,7 +106,7 @@ public class Transportation {
 
     /**
     * Sets the purchase type
-    * @param purchase type
+    * @param purchaseType
     */
     public void setPurchaseType(String purchaseType){this.purchaseType = purchaseType;}
 
@@ -128,12 +133,6 @@ public class Transportation {
     * @param travelInstructions
     */
     public void setTravelInstructions(String travelInstructions){this.travelInstructions = travelInstructions;}
-
-    /**
-    * Sets the total cost
-    * @param cost
-    */
-    public double getComputedRentalCost(){return (Math.ceil((double) numPurchased / maxPassengers)) * cost;}
     
     
     /**
