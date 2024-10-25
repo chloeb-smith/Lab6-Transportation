@@ -256,7 +256,29 @@ public class WTCKeenanShawSmith {
                 }
             }
         }
+        for (Transportation transportation : transportations){
+            if (transportation.getName().equals(mode)) { // finding mode
+                System.out.print("How many people are traveling?: ");
+                int num = input.nextInt();
+                transportation.setNumPurchased(num);
+                // determining cost if tickets are purchased
+                if (transportation.getPurchaseType().equals("Ticket")){ 
+                    System.out.printf("\n%s%d%s%.2f\n","The total cost for ", num, " passengers will be $",transportation.getComputedTicketCost());
+                // determining cost if rental is purchased
+                } else if (transportation.getPurchaseType().equals("Rental")) {
+                    // determine if one vehicle is needed
+                    if (transportation.getMaxPassengers() >= num){ 
+                        System.out.printf("\n%s%.2f","The total cost of transportation will be ",transportation.getCost());
+                    // determine cost if multiple vehicles are needed
+                    } else if (transportation.getMaxPassengers() <= num) {
+                        double vehicles = (double) num / transportation.getMaxPassengers();
+                        int numVehicles = (int) Math.ceil(vehicles);
+                        System.out.printf("\n%s%d%s%.2f\n","The total cost for ",numVehicles," vehicles will be $",transportation.getComputedRentalCost());
+                    }
+                }
 
+            }
+        }
         //Print travel instructions.
         System.out.printf("%n%s", travelInstruction);
     }
