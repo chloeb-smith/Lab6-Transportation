@@ -11,170 +11,46 @@ public class WTCKeenanShawSmith {
         //Instances
         Transportation[] transportations = new Transportation[11];
         //Land transportation
-        Bus bus = new Bus(
-                "Bus",
-                45.0,
-                3.50,
-                "Ticket",
-                false,
-                0,
-                40,
-                "Bus travels from Smith Station down College Rd to Monkey Junction as the 107. It then" +
-                        " becomes the 210 and travels up Carolina Beach Rd to Shaw Station",
-                "Pavement",
-                8,
-                101
-        );
+        Bus bus = new Bus("Bus",45.0,3.50,"Ticket",false,0,40,"Bus travels from Smith Station down College Rd to Monkey Junction as the 107. It then" +
+                        " becomes the 210 and travels up Carolina Beach Rd to Shaw Station","Pavement",8,101);
         transportations[0] = bus;
 
-        Automobile auto = new Automobile(
-                "Car",
-                60.0,
-                50.0,
-                "Rental",
-                false,
-                0,
-                4,
-                "Go to Monkey Junction Car Rentals on Carolina Beach Rd near College Rd. Wear your" +
-                        " seatbelt and drive safely.",
-                "Terrain",
-                4,
-                "Toyota",
-                "Camry",
-                2015
-        );
+        Automobile auto = new Automobile("Car",60.0,50.0,"Rental",false,0,4,"Go to Monkey Junction Car Rentals on Carolina Beach Rd near College Rd. Wear your" +
+                        " seatbelt and drive safely.","Terrain",4,"Toyota","Camry",2015);
         transportations[1] = auto;
 
-        Bike bike = new Bike(
-                "Bike",
-                30.0,
-                15.0,
-                "Rental",
-                false,
-                0,
-                1,
-                "Must ride within designated bike lanes if avaiable and/or ahere to Vulnerable Road User(VRU) laws.",
-                "Terrain",
-                2,
-                "Schwinn",
-                2
-        );
+        Bike bike = new Bike("Bike",30.0,15.0,"Rental",false,0,1,"Must ride within designated bike lanes if avaiable and/or ahere to Vulnerable Road User(VRU) laws.",
+                "Terrain",2,"Schwinn",2);
         transportations[2] = bike;
 
-        Train train = new Train(
-                "Train",
-                55.0,
-                20.0,
-                "Ticket",
-                false,
-                0,
-                25,
-                "Train leaves Keenan station at 8PM. Get off at Sisson Station.",
-                "Terrain",
-                8,
-                "Coal"
-        );
+        Train train = new Train("Train",55.0,20.0,"Ticket",false,0,25,"Train leaves Keenan station at 8PM. Get off at Sisson Station.",
+                "Terrain",8,"Coal");
         transportations[3] = train;
 
         //Water Transportation
-        Boat boat = new Boat(
-                "Boat",
-                60.0,
-                50.0,
-                "Rental",
-                false,
-                0,
-                8,
-                "Your boat is docked at Cape Fear Boat Place. Go there to use.",
-                "Intracoastal Waterway",
-                "Boat",
-                6
-        );
+        Boat boat = new Boat("Boat",60.0,50.0,"Rental",false,0,8,"Your boat is docked at Cape Fear Boat Place. Go there to use.",
+                "Intracoastal Waterway","Boat",6);
         transportations[4] = boat;
 
-        Ship ship = new Ship(
-                "Ship",
-                45.0,
-                45.0,
-                "Ticket",
-                false,
-                0,
-                100,
-                "Ship leaves the port at 8AM. All sailors to their stations.",
-                "Sea",
-                "Food"
-        );
+        Ship ship = new Ship("Ship",45.0,45.0,"Ticket",false,0,100,"Ship leaves the port at 8AM. All sailors to their stations.",
+                "Sea","Food");
         transportations[5] = ship;
 
-        Submarine sub = new Submarine(
-                "Sub",
-                25.0,
-                60.0,
-                "Ticket",
-                false,
-                0,
-                8,
-                "DIVE! DIVE!",
-                "Underwater",
-                10000
-        );
+        Submarine sub = new Submarine("Sub",25.0,60.0,"Ticket",false,0,8,"DIVE! DIVE!","Underwater",10000);
         transportations[6] = sub;
 
         //Air Transportation
-        Plane plane = new Plane(
-                "Plane",
-                3000.0,
-                350.0,
-                "Ticket",
-                false,
-                0,
-                700,
-                "Your flight has been delayed 6 hours. It will leave at terminal B at 2AM.",
-                42000,
-                "Delta"
-        );
+        Plane plane = new Plane("Plane",3000.0,350.0,"Ticket",false,0,700,"Your flight has been delayed 6 hours. It will leave at terminal B at 2AM.",42000,"Delta");
         transportations[7] = plane;
 
-        Helicopter heli = new Helicopter(
-                "Chopper",
-                250,
-                950.0,
-                "Ticket",
-                false,
-                0,
-                7,
-                "You will need to bring a valid ID and passport to the front desk of Smith Private Airways" + 
-                    " to sucessfully board.",
-                25000
-        );
+        Helicopter heli = new Helicopter("Chopper",250,950.0,"Ticket",false,0,7,"You will need to bring a valid ID and passport to the front desk of Smith Private Airways" + 
+                    " to sucessfully board.",25000);
         transportations[8] = heli;
 
-        HotAirBalloon balloon = new HotAirBalloon(
-                "Balloon",
-                200,
-                250.0,
-                "Ticket",
-                false,
-                0,
-                12,
-                "Please ensure that you are wearing closed toed shoes.",
-                75000,
-                "Wicker"
-        );
+        HotAirBalloon balloon = new HotAirBalloon("Balloon",200,250.0,"Ticket",false,0,12,"Please ensure that you are wearing closed toed shoes.",75000,"Wicker");
         transportations[9] = balloon;
 
-        Dirigible dirigible = new Dirigible(
-                "Dirigible",
-                70,
-                2000000,
-                "Ticket",
-                false,
-                0,
-                15,
-                "Boarding begins at 6AM and takeoff will follow at 6:45AM.",
-                10000,
-                "Yellow"
-        );
+        Dirigible dirigible = new Dirigible("Dirigible",70,2000000,"Ticket",false,0,15,"Boarding begins at 6AM and takeoff will follow at 6:45AM.",10000,"Yellow");
         transportations[10] = dirigible;
 
         //Scanner object
