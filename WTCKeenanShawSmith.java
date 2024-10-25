@@ -3,17 +3,15 @@
  * John Keenan, Tyana Shaw, Chloe Smith
  * 10/18/2024
  * CSC331-003
+ * TODO: fill in travel instructions and delete this comment! :-)
  */
 import java.util.Scanner;
 
 public class WTCKeenanShawSmith {
     public static void main(String[] args) {
         //Instances
-        Transportation[] transportations = new Transportation[10];
-
-        // Land Transportation
-        LandTransportation[] landTransportations = new LandTransportation[4];   // and here!
-
+        Transportation[] transportations = new Transportation[11];
+        //Land transportation
         Bus bus = new Bus(
                 "Bus",
                 45.0,
@@ -23,13 +21,12 @@ public class WTCKeenanShawSmith {
                 0,
                 40,
                 "Bus travels from Smith Station down College Rd to Monkey Junction as the 107. It then" +
-                        "becomes the 210 and travels up Carolina Beach Rd to Shaw Station",
+                        " becomes the 210 and travels up Carolina Beach Rd to Shaw Station",
                 "Pavement",
                 8,
                 101
         );
         transportations[0] = bus;
-        landTransportations[0] = bus;
 
         Automobile auto = new Automobile(
                 "Car",
@@ -40,7 +37,7 @@ public class WTCKeenanShawSmith {
                 0,
                 4,
                 "Go to Monkey Junction Car Rentals on Carolina Beach Rd near College Rd. Wear your" +
-                        "seatbelt and drive safely.",
+                        " seatbelt and drive safely.",
                 "Terrain",
                 4,
                 "Toyota",
@@ -48,7 +45,6 @@ public class WTCKeenanShawSmith {
                 2015
         );
         transportations[1] = auto;
-        landTransportations[1] = auto;
 
         Bike bike = new Bike(
                 "Bike",
@@ -65,7 +61,6 @@ public class WTCKeenanShawSmith {
                 2
         );
         transportations[2] = bike;
-        landTransportations[2] = bike;
 
         Train train = new Train(
                 "Train",
@@ -77,14 +72,12 @@ public class WTCKeenanShawSmith {
                 25,
                 "Train leaves Keenan station at 8PM. Get off at Sisson Station.",
                 "Terrain",
-                8 ,
+                8,
                 "Coal"
         );
         transportations[3] = train;
-        landTransportations[3] = train;
 
         //Water Transportation
-        WaterTransportation[] waterTransportations = new WaterTransportation[3];    // and here!
         Boat boat = new Boat(
                 "Boat",
                 60.0,
@@ -99,7 +92,6 @@ public class WTCKeenanShawSmith {
                 6
         );
         transportations[4] = boat;
-        waterTransportations[0] = boat;
 
         Ship ship = new Ship(
                 "Ship",
@@ -114,7 +106,6 @@ public class WTCKeenanShawSmith {
                 "Food"
         );
         transportations[5] = ship;
-        waterTransportations[1] = ship;
 
         Submarine sub = new Submarine(
                 "Sub",
@@ -128,12 +119,9 @@ public class WTCKeenanShawSmith {
                 "Underwater",
                 10000
         );
-        transportations[6] = ship;
-        waterTransportations[2] = ship;
+        transportations[6] = sub;
 
         //Air Transportation
-        AirTransportation[] airTransportations = new AirTransportation[4];
-
         Plane plane = new Plane(
                 "Plane",
                 3000.0,
@@ -147,7 +135,6 @@ public class WTCKeenanShawSmith {
                 "Delta"
         );
         transportations[7] = plane;
-        airTransportations[0] = plane;
 
         Helicopter heli = new Helicopter(
                 "Chopper",
@@ -161,10 +148,9 @@ public class WTCKeenanShawSmith {
                 25000
         );
         transportations[8] = heli;
-        airTransportations[1] = heli;
 
         HotAirBalloon balloon = new HotAirBalloon(
-                "Hot Air Balloon",
+                "Balloon",
                 200,
                 250.0,
                 "Ticket",
@@ -176,7 +162,6 @@ public class WTCKeenanShawSmith {
                 "Wicker"
         );
         transportations[9] = balloon;
-        airTransportations[2] = balloon;
 
         Dirigible dirigible = new Dirigible(
                 "Dirigible",
@@ -191,208 +176,87 @@ public class WTCKeenanShawSmith {
                 "Yellow"
         );
         transportations[10] = dirigible;
-        airTransportations[3] = dirigible;
-        
+
         //Scanner object
         Scanner input = new Scanner(System.in);
 
-        //TODO: rework the code below, I think this could be a lot more efficient taking advantage of polymorphism
-        /*
-        String[] land_modes = {"Option", "Train", "Bus", "Automobile", "Bike"};
-        String[] water_modes = {"Option", "Boat", "Ship", "Submarine"};
-        String[] air_modes = {"Plane", "Helicopter", "Dirigible", "Hot Air Balloon"};
-        String form_str = "%-16s%-16s%-16s%-16s%s%n";
-
-        //Prompt user for a mode of transportation until they enter a valid input
-        boolean validInput = false;
-        while (!validInput) {
-            //User prompt
-            System.out.print("Choose a means of transportation (air/land/water) ");
-            String means = input.next();
-
-            //Multiple selection statement based on user input
-            switch (means) {
-                case "land":
-                    for (String mode : land_modes) {
-                        System.out.printf(form_str, mode,
-                                "Cost", "Ticket/Rental", "Average Speed",
-                                "Passengers Allowed");
-                    }
-                    vehicle("land");    //ln61
-                    validInput = true;
-                    break;
-                case "water":
-                    for (String mode : water_modes){
-                        System.out.printf(form_str, mode,
-                                "Cost", "Ticket/Rental", "Average Speed",
-                                "Passengers Allowed");
-                    }
-                    vehicle("water");   //ln61
-                    validInput = true;
-                    break;
-                case "air":
-                    for (String mode : air_modes){
-                        System.out.printf(form_str, mode,
-                                "Cost", "Ticket/Rental", "Average Speed",
-                                "Passengers Allowed");
-                    }
-                    vehicle("air");     //ln61
-                    validInput = true;
-                    break;
-                default:
-                    System.out.print("Invalid input. ");
+        //Get medium from user.
+        boolean invalid_input = true;
+        String medium = "";
+        while (invalid_input) {
+            System.out.print("Select a means (Air, Land, Water) ");
+            medium = input.next();
+            if (medium.equals("Air") || medium.equals("Land") || medium.equals("Water")) {
+                invalid_input = false;
+            } else {
+                System.out.print("Invalid input. ");
             }
         }
-    }
 
-    /**
-     * User selects a specific transportation device and passenger count, prints information.
-     * @param type String air/land/water. Only affects initial printed message.
-     */
-        /*
-    public static void vehicle(String type){
-        //Scanner object
-        Scanner input = new Scanner(System.in);
-
-        //Prompt user for means of land transportation until they provide a valid input.
-        boolean validInput = false;
-        while (!validInput){
-            //User prompt
-            System.out.printf("Select a means of transportation %s%s%s ",
-                    type.equals("land") ? "(train/bus/automobile/bike)" : "",
-                    type.equals("water") ? "(boat/ship/submarine)" : "",
-                    type.equals("air") ? "(plane/helicopter/dirigible/hot_air_balloon)": "");
-            String means = input.next();
-
-            //Multiple selection statement based on choice
-            switch (means){
-                case "train":
-                    System.out.println("Train Information");
-                    validInput = confirm(); //ln185
-                    if (validInput){
-                        System.out.print("How many passengers? ");
-                        int passengers = input.nextInt();
-                        System.out.println("Cost based on passengers, travel instructions.");
-                    }
-                    break;
-                case "bus":
-                    System.out.println("Bus Information");
-                    validInput = confirm(); //ln185
-                    if (validInput){
-                        System.out.print("How many passengers? ");
-                        int passengers = input.nextInt();
-                        System.out.println("Cost based on passengers, travel instructions.");
-                    }
-                    break;
-                case "automobile":
-                    System.out.println("Automobile Information");
-                    validInput = confirm(); //ln185
-                    if (validInput){
-                        System.out.print("How many passengers? ");
-                        int passengers = input.nextInt();
-                        System.out.println("Cost based on passengers, travel instructions.");
-                    }
-                    break;
-                case "bike":
-                    System.out.println("Bike Information");
-                    validInput = confirm(); //ln185
-                    if (validInput){
-                        System.out.print("How many passengers? ");
-                        int passengers = input.nextInt();
-                        System.out.println("Cost based on passengers, travel instructions.");
-                    }
-                    break;
-                case "boat":
-                    System.out.println("Boat Information");
-                    validInput = confirm(); //ln185
-                    if (validInput){
-                        System.out.print("How many passengers? ");
-                        int passengers = input.nextInt();
-                        System.out.println("Cost based on passengers, travel instructions.");
-                    }
-                    break;
-                case "ship":
-                    System.out.println("Ship Information");
-                    validInput = confirm(); //ln185
-                    if (validInput){
-                        System.out.print("How many passengers?" );
-                        int passengers = input.nextInt();
-                        System.out.println("Cost based on passengers, travel instructions.");
-                    }
-                    break;
-                case "submarine":
-                    System.out.println("Submarine Information");
-                    validInput = confirm(); //ln185
-                    if (validInput){
-                        System.out.print("How many passengers? ");
-                        int passengers = input.nextInt();
-                        System.out.println("Cost of passengers, travel instructions");
-                    }
-                    break;
-                case "plane":
-                    System.out.println("Plane Information");
-                    validInput = confirm(); //ln185
-                    if (validInput) {
-                        System.out.print("How many passengers? ");
-                        int passengers = input.nextInt();
-                        System.out.println("Cost based on passengers, travel instructions");
-                    }
-                    break;
-                case "helicopter":
-                    System.out.println("Helicopter Information");
-                    validInput = confirm(); //ln185
-                    if (validInput){
-                        System.out.print("How many passengers? ");
-                        int passengers = input.nextInt();
-                        System.out.println("Cost based on passengers, travel instructions");
-                    }
-                    break;
-                case "dirigible":
-                    System.out.println("Dirigible Information");
-                    validInput = confirm(); //ln185
-                    if (validInput){
-                        System.out.print("How many passengers? ");
-                        int passengers = input.nextInt();
-                        System.out.println("Cost based on passengers, travel instructions");
-                    }
-                    break;
-                case "hot_air_balloon":
-                    System.out.println("Hot Air Balloon Information");
-                    validInput = confirm(); //ln185
-                    if (validInput){
-                        System.out.print("How many passengers? ");
-                        int passengers = input.nextInt();
-                        System.out.println("Cost based on passengers, travel instructions");
-                    }
-                default:
-                    System.out.print("Invalid input. ");
+        //Print table.
+        System.out.printf(
+                "%n%-24s%-24s%-24s%-24s%s%n",
+                "Type",
+                "Cost",
+                "Purchase Type",
+                "Average Speed",
+                "Max Passengers"
+        );
+        for (Transportation transportation : transportations) {
+            if (transportation instanceof AirTransportation && medium.equals("Air") ||
+                    transportation instanceof LandTransportation && medium.equals("Land") ||
+                    transportation instanceof WaterTransportation && medium.equals("Water")) {
+                System.out.printf(
+                        "%-24s$%-24.2f%-24s%-24.2f%d%n",
+                        transportation.getName(),
+                        transportation.getCost(),
+                        transportation.getPurchaseType(),
+                        transportation.getAverageSpeed(),
+                        transportation.getMaxPassengers()
+                );
             }
         }
-    }
 
-    /**
-     * Prompts the user y for yes and n for no.
-     * @return boolean true if y, false if n
-     *//*
-    public static boolean confirm(){
-        //Scanner object
-        Scanner input = new Scanner(System.in);
-
-        //Prompt user for input until valid
-        while (true){
-            System.out.print("Confirm? (y/n) ");
-            String answer = input.next();
-            switch (answer){
-                case "Y":
-                case "y":
-                    return true;
-                case "N":
-                case "n":
-                    return false;
-                default:
+        //Ask user to choose a mode.
+        boolean keep_asking = true;
+        String mode = "";
+        String travelInstruction = "";
+        while (keep_asking) {
+            invalid_input = true;
+            while (invalid_input) {
+                System.out.print("\nSelect from the options above. ");
+                mode = input.next();
+                for (Transportation transportation : transportations) {
+                    if (transportation.getName().equals(mode)) {
+                        invalid_input = false;
+                        System.out.printf("%n%s", transportation);
+                        travelInstruction = transportation.getTravelInstructions();
+                        break;
+                    }
+                }
+                if (invalid_input) {
                     System.out.print("Invalid input. ");
+                }
+            }
+            invalid_input = true;
+            while (invalid_input) {
+                System.out.printf("\nConfirm %s? (Yes, No) ", mode);
+                String confirmation = input.next();
+                switch (confirmation) {
+                    case "Yes":
+                        keep_asking = false;
+                        invalid_input = false;
+                        break;
+                    case "No":
+                        invalid_input = false;
+                        break;
+                    default:
+                        System.out.print("Invalid input. ");
+                }
             }
         }
+
+        //Print travel instructions.
+        System.out.printf("%n%s", travelInstruction);
     }
 }
-*/}}
