@@ -16,7 +16,10 @@ public class Dirigible extends AirTransportation{
     //Mutator Methods (setters)
     public void setColor(String color) {this.color = color;}
 
-
+    /**
+    * Creates a string representation of the methods output
+    * @return a string
+    */
     @Override
     public String toString(){
         return String.format(
