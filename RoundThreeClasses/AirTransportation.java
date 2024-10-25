@@ -16,7 +16,7 @@ public class AirTransportation extends Transportation {
     
     /**
     * Sets the altitude
-    * @params altidude
+    * @param altidude
     */
     public void setAltitude(int altitude){this.altitude = altitude;}
 
