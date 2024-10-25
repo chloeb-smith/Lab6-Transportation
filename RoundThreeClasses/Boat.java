@@ -20,6 +20,10 @@ public class Boat extends WaterTransportation {
     public void setBoatName(String boatName) {this.boatName = boatName;}
     public void setNumEngines(int numEngines) {this.numEngines = numEngines;}
 
+    /**
+    * Creates a string representation of the methods output
+    * @return a string
+    */
     @Override
     public String toString(){
         return String.format(
