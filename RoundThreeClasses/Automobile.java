@@ -11,7 +11,7 @@ public class Automobile extends LandTransportation {
         this.model = model;
         this.year = year;
     }
-
+    
     public String getMake(){return make;}
     public void setMake(String make){this.make = make;}
 
@@ -21,6 +21,10 @@ public class Automobile extends LandTransportation {
     public int getYear(){return year;}
     public void setYear(int year){this.year = year;}
 
+    /**
+    * Creates a string representation of the methods output
+    * @return a string
+    */
     @Override
     public String toString(){
         return String.format(
