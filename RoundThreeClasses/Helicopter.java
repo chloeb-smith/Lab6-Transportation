@@ -9,10 +9,19 @@ public class Helicopter extends AirTransportation{
         this.numBlades = numPurchased;
     }
 
-    //Accessor Methods (getters)
+    // Getters 
+
+    /** 
+    * Gets the number of blades
+    * @return numBlades
+    */ 
     public int getNumBlades() {return numBlades;}
 
-    //Mutator Methods (setters)
+    // Setters
+    /** 
+    * Sets the number of blades
+    * @param numBlades
+    */ 
     public void setNumBlades(int num) {this.numBlades = num;}
 
     /**
