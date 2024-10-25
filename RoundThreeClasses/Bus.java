@@ -1,4 +1,5 @@
 public class Bus extends LandTransportation {
+    
     // Class Variables
     private int routeNum;
 
