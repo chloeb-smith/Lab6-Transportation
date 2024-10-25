@@ -22,7 +22,7 @@ public class Helicopter extends AirTransportation{
     
     /** 
     * Sets the number of blades
-    * @param numBlades
+    * @param num
     */ 
     public void setNumBlades(int num) {this.numBlades = num;}
 
