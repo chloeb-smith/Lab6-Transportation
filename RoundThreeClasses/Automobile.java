@@ -1,4 +1,5 @@
 public class Automobile extends LandTransportation {
+    
     // Class Attributes
     private String make;
     private String model;
