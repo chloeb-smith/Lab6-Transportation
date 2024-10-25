@@ -1,18 +1,24 @@
 public class AirTransportation extends Transportation {
+    // Class Variables
     private int altitude;
 
+    // Constructor
     public AirTransportation(String name, double averageSpeed, double cost, String purchaseType, boolean purchased,
                              int numPurchased, int maxPassengers, String travelInstructions, int altitude){
         super(name, averageSpeed, cost, purchaseType, purchased, numPurchased, maxPassengers, travelInstructions);
 
         this.altitude = altitude;
     }
+    \
+    // Getters
     
     /**
     * Gets the altitude
     * @return altitude 
     */
     public int getAltitude(){return altitude;}
+
+    // Setters
     
     /**
     * Sets the altitude
