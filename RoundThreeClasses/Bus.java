@@ -11,6 +11,10 @@ public class Bus extends LandTransportation {
     public int getRouteNum(){return routeNum;}
     public void setRouteNum(int routeNum){this.routeNum = routeNum;}
 
+    /**
+    * Creates a string representation of the methods output
+    * @return a string
+    */
     @Override
     public String toString(){
         return String.format(
