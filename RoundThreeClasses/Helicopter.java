@@ -18,6 +18,7 @@ public class Helicopter extends AirTransportation{
     public int getNumBlades() {return numBlades;}
 
     // Setters
+    
     /** 
     * Sets the number of blades
     * @param numBlades
