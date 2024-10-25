@@ -16,6 +16,10 @@ public class Submarine extends WaterTransportation{
     //Mutator Methods (setters)
     public void setDepth(double depth) {this.depth = depth;}
 
+    /**
+    * Creates a string representation of the methods output
+    * @return a string
+    */
     @Override
     public String toString(){
         return String.format(
