@@ -10,7 +10,7 @@ public class AirTransportation extends Transportation {
 
         this.altitude = altitude;
     }
-    \
+    
     // Getters
     
     /**
