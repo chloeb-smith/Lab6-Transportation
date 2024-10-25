@@ -14,16 +14,16 @@ public class Dirigible extends AirTransportation{
     // Getters
 
     /** 
-    * Sets the color
-    * @param color
+    * Gets the color
+    * @return color
     */ 
     public String getColor() {return color;}
 
     // Setters
 
     /** 
-    * Gets the color
-    * @return color
+    * Sets the color
+    * @param color
     */ 
     public void setColor(String color) {this.color = color;}
 
