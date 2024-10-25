@@ -220,7 +220,7 @@ public class WTCKeenanShawSmith {
         }
 
         //Ask user to choose a mode.
-        boolean keep_asking = true;
+        boolean keep_asking = true;    //set to false when the user confirms
         String mode = "";
         String travelInstruction = "";
         while (keep_asking) {
@@ -228,7 +228,7 @@ public class WTCKeenanShawSmith {
             while (invalid_input) {
                 System.out.print("\nSelect from the options above. ");
                 mode = input.next();
-                for (Transportation transportation : transportations) {
+                for (Transportation transportation : transportations) {    //find the option the user selected
                     if (transportation.getName().equals(mode)) {
                         invalid_input = false;
                         System.out.printf("%n%s", transportation);
@@ -240,6 +240,7 @@ public class WTCKeenanShawSmith {
                     System.out.print("Invalid input. ");
                 }
             }
+            //ask the user to conirm
             invalid_input = true;
             while (invalid_input) {
                 System.out.printf("\nConfirm %s? (Yes, No) ", mode);
@@ -257,6 +258,7 @@ public class WTCKeenanShawSmith {
                 }
             }
         }
+        //get passenger count and calculate cost
         for (Transportation transportation : transportations){
             if (transportation.getName().equals(mode)) { // finding mode
                 System.out.print("How many people are traveling?: ");
