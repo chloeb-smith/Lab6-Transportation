@@ -1,4 +1,5 @@
 public class Submarine extends WaterTransportation{
+    
     // Class Attributes
      public double depth;
 
@@ -10,10 +11,20 @@ public class Submarine extends WaterTransportation{
         this.depth = depth;
     }
 
-    //Accessor Methods (getters)
+    // Getters
+
+    /** 
+    * Gets the depth
+    * @return depth
+    */ 
     public double getDepth() {return depth;}
 
-    //Mutator Methods (setters)
+    //Setters
+
+    /** 
+    * Sets the depth
+    * @param depth
+    */ 
     public void setDepth(double depth) {this.depth = depth;}
 
     /**
