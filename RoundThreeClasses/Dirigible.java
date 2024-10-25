@@ -10,10 +10,20 @@ public class Dirigible extends AirTransportation{
         this.color = color;
     }
 
-    //Accessor Methods (getters)
+    // Getters
+
+    /** 
+    * Sets the color
+    * @param color
+    */ 
     public String getColor() {return color;}
 
-    //Mutator Methods (setters)
+    // Setters
+
+    /** 
+    * Gets the color
+    * @return color
+    */ 
     public void setColor(String color) {this.color = color;}
 
     /**
