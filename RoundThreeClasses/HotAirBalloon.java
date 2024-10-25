@@ -24,7 +24,7 @@ public class HotAirBalloon extends AirTransportation{
 
     /** 
     * Sets the basket material
-    * @param basetMaterial
+    * @param basketMaterial
     */ 
     public void setBasketMaterial(String basketMaterial) {this.basketMaterial = basketMaterial;}
 
