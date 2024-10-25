@@ -1,4 +1,5 @@
 public class Ship extends WaterTransportation{
+    
     // Class Attributes
     public String shipName;
     public String cargoType;
@@ -11,12 +12,32 @@ public class Ship extends WaterTransportation{
         this.cargoType = cargoType;
     }
 
-    //Accessor Methods (getters)
+    // Getters
+
+    /** 
+    * Gets the ship name
+    * @return shipName
+    */ 
     public String getShipName() {return shipName;}
+
+    /** 
+    * Gets the cargo type
+    * @return cargoType
+    */ 
     public String getCargoType() {return cargoType;}
 
-    //Mutator Methods (setters)
+    // Setters
+
+    /** 
+    * Sets the ship name
+    * @param shipName
+    */ 
     public void setShipName(String shipName) {this.shipName = shipName;}
+
+    /** 
+    * Sets the cargo type
+    * @param cargoType
+    */ 
     public void setCargoType(String cargoType) {this.cargoType = cargoType;}
 
     /**
