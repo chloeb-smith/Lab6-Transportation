@@ -15,6 +15,10 @@ public class Bike extends LandTransportation {
     public int getNumGears(){return numGears;}
     public void setNumGears(int numGears){this.numGears = numGears;}
 
+    /**
+    * Creates a string representation of the methods output
+    * @return a string
+    */
     @Override
     public String toString(){
         return String.format(
