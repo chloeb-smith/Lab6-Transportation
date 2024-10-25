@@ -10,6 +10,10 @@ public class WaterTransportation extends Transportation {
     public String getWaterType(){return waterType;}
     public void setWaterType(String waterType){this.waterType = waterType;}
 
+    /**
+    * Creates a string representation of the methods output
+    * @return a string
+    */
     @Override
     public String toString(){
         return String.format(
