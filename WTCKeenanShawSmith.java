@@ -43,7 +43,7 @@ public class WTCKeenanShawSmith {
         Plane plane = new Plane("Plane",3000.0,350.0,"Ticket",false,0,700,"Your flight has been delayed 6 hours. It will leave at terminal B at 2AM.",42000,"Delta");
         transportations[7] = plane;
 
-        Helicopter heli = new Helicopter("Chopper",250,950.0,"Ticket",false,5,7,"You will need to bring a valid ID and passport to the front desk of Smith Private Airways" + 
+        Helicopter heli = new Helicopter("Chopper",250,950.0,"Ticket",false,0,7,"You will need to bring a valid ID and passport to the front desk of Smith Private Airways" + 
                     " to sucessfully board.",25000);
         transportations[8] = heli;
 
