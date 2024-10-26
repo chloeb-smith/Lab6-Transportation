@@ -60,7 +60,7 @@ public class WTCKeenanShawSmith {
         boolean invalid_input = true;
         String medium = "";
         while (invalid_input) {
-            System.out.print("Select a means (Air, Land, Water) ");
+            System.out.print("Select a means (Air, Land, Water): ");
             medium = input.next();
             if (medium.equals("Air") || medium.equals("Land") || medium.equals("Water")) {
                 invalid_input = false;
@@ -101,7 +101,7 @@ public class WTCKeenanShawSmith {
         while (keep_asking) {
             invalid_input = true;
             while (invalid_input) {
-                System.out.print("\nSelect from the options above. ");
+                System.out.print("\nSelect from the options above: ");
                 mode = input.next();
                 for (Transportation transportation : transportations) {    //find the option the user selected
                     if (transportation.getName().equals(mode)) {
