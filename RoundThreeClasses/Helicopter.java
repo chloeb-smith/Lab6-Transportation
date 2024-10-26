@@ -7,7 +7,7 @@ public class Helicopter extends AirTransportation{
     public Helicopter(String name, double averageSpeed, double cost, String purchaseType, boolean purchased, int numPurchased, int maxPassengers, String travelInstructions, int altitude) {
         super(name, averageSpeed, cost, purchaseType, purchased, numPurchased, maxPassengers, travelInstructions, altitude);
 
-        this.numBlades = numPurchased;
+        this.numBlades = numBlades;
     }
 
     // Getters 
