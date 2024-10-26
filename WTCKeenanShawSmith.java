@@ -29,7 +29,7 @@ public class WTCKeenanShawSmith {
 
         //Water Transportation
         Boat boat = new Boat("Boat",60.0,50.0,"Rental",false,0,8,"Your boat is docked at Cape Fear Boat Place. Go there to use.",
-                "Intracoastal Waterway","Boat",6);
+                "Intracoastal Waterway","Boat",3);
         transportations[4] = boat;
 
         Ship ship = new Ship("Ship",45.0,45.0,"Ticket",false,0,100,"Ship leaves the port at 8AM. All sailors to their stations.",
