@@ -115,7 +115,7 @@ public class WTCKeenanShawSmith {
                     System.out.print("Invalid input. ");
                 }
             }
-            //ask the user to conirm
+            //ask the user to confirm
             invalid_input = true;
             while (invalid_input) {
                 System.out.printf("\nConfirm %s? (Yes, No) ", mode);
