@@ -44,7 +44,7 @@ public class WTCKeenanShawSmith {
         transportations[7] = plane;
 
         Helicopter heli = new Helicopter("Chopper",250,950.0,"Ticket",false,0,7,"You will need to bring a valid ID and passport to the front desk of Smith Private Airways" + 
-                    " to sucessfully board.",25000);
+                    " to sucessfully board.",25000,5);
         transportations[8] = heli;
 
         HotAirBalloon balloon = new HotAirBalloon("Balloon",200,250.0,"Ticket",false,0,12,"Please ensure that you are wearing closed toed shoes.",75000,"Wicker");
