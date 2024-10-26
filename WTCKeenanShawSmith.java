@@ -28,7 +28,7 @@ public class WTCKeenanShawSmith {
         transportations[3] = train;
 
         //Water Transportation
-        Boat boat = new Boat("Boat",60.0,50.0,"Rental",false,0,8,"Your boat is docked at Cape Fear Boat Place. Go there to use.",
+        Boat boat = new Boat("Boat",60.0,500.0,"Rental",false,0,8,"Your boat is docked at Cape Fear Boat Place. Go there to use.",
                 "Intracoastal Waterway","Boat",3);
         transportations[4] = boat;
 
